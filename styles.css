@@ -1,0 +1,210 @@
+:root{
+    --darkblue: #1b2433;
+    --darkblue2: #0d2a66;
+    --softblue: #346fb4;
+    --hardpink: #fa2678;
+    --yellow: #ffd763;
+}
+
+
+
+/* -------- SVG LOGO -------- */
+
+.st0{fill:var(--hardpink);}
+.st1{fill:var(--softblue);}
+
+
+
+/* --------- GENERALES --------- */
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    background: var(--darkblue2);
+    /* animation: background 20s infinite alternate; */
+    color: white;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* --------- HEADER --------- */
+
+header{
+    background-color: var(--darkblue2);
+    /* animation: background 20s infinite alternate; */
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+}
+
+#logo_frijol{
+    padding-left: 100px;
+}
+#link_logo{
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+#logo{
+    width: 70px;
+    height: 70px;
+}
+#text_logo{
+    padding-left: 10px;
+    user-select: none;
+    font-size: 1.7rem;
+    text-shadow: 2px 3px var(--hardpink);
+}
+
+#nav_header{
+    padding-right: 90px;
+}
+#nav_ul{
+    display: flex;
+}
+#nav_list{
+    padding: 0 10px 0 10px;
+}
+#nav_link{
+    /* text-transform: uppercase; */
+}
+
+
+
+/* --------- CAJAS ----------- */
+
+#main-content{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 50px;
+    margin: 110px 100px;
+}
+
+
+/* ---------- CONTENEDOR CAJAS --------- */
+
+#ilus_box, #blog_box{
+    /* background: white; */
+    /* box-shadow: 7px 7px var(--hardpink); */
+    border: 2px dashed white ;
+    transition: 0.3s;
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* #ilus_box:hover, #blog_box:hover{
+    box-shadow: 10px 10px var(--hardpink);
+    transition: 0.3s;
+} */
+#center_box{
+    display: grid;
+    grid-template-rows: 350px 250px;
+    row-gap: 50px;
+}
+
+
+
+/* -------- CAJA CENTRAL -------- */
+
+#main_box{
+    /* color: var(--softblue); */
+    /* background: white; */
+    /* box-shadow: 7px 7px var(--hardpink); */
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+#main_text h1{
+    margin: -9px 51px;
+    font-size: 3rem;
+    text-align: center;
+    vertical-align: top;
+    text-shadow: 2px 4px var(--hardpink);
+}
+
+/* --- CUENTA REGRESIVA --- */
+#countdown{
+    display: flex;
+    justify-content: center;
+}
+.simply-section{
+    background: white;
+    box-shadow: 7px 7px var(--hardpink);
+    width: 150px;
+    height: 150px;
+    margin: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--darkblue2);
+}
+.simply-amount{
+    display: block;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 700;
+}
+.simply-word{
+    display: block;
+    text-align: center;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+
+
+#rrss_box{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    max-height: 250px;
+    min-height: 200px;
+}
+
+
+/* -------- CAJA RRSS -------- */
+
+#ig_box, .fb-page{
+    color: var(--softblue);
+    background: white;
+    box-shadow: 7px 7px var(--hardpink);
+    transition: 0.3s;
+    width: 340px;
+    justify-self: end;
+}
+
+.fb-page{justify-self: start;}
+
+#ig_box:hover, .fb-page:hover{
+    box-shadow: 15px 15px var(--hardpink);
+    transition: 0.3s;
+    transform: translate(-5px,-5px);
+}
+
+
+
+@media(max-width: 600px){
+
+
+}
+
+
+/* @keyframes background {
+    from {
+      background: var(--darkblue2);
+    }
+    to {
+      background: var(--darkblue);
+    }
+  } */
