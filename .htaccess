@@ -1,2 +1,2 @@
 RewriteEngine on 
-RewriteRule ^nosotrxs.html$ /nosotrxs
+RewriteRule ^index.html$ prueba.html
