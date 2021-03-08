@@ -1,0 +1,91 @@
+    /* GENERAL */
+
+#us_box{
+    margin: 5vh 10vw;
+}
+#us_title, .member_box{
+    animation: showUp .8s;
+    animation-fill-mode: backwards;
+}
+
+    /* TITULO Y  ABSTRACT */
+
+#us_main_title{
+    font-size: 2.5vw;
+    text-align: center;
+    text-shadow: 2px 4px var(--hardpink);
+}
+#us_title{
+    width: 60vw;
+    margin: 0 auto;
+}
+#us_text{
+    font-size: .9vw;
+    margin: 7vh 0;
+    text-align: justify;
+}
+
+    /* CAJITAS */
+
+#member_main{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+.member_box{
+    margin: 30px 20px;
+    display: grid;
+    position: relative;
+    justify-self: center;
+    border-radius: 100%;
+    box-shadow: 5px 5px var(--hardpink);
+    transition: 0.5s;
+}
+.member_img{
+    cursor: pointer;
+    border-radius: 100%;
+    width: 250px;
+    max-width: 100%;
+    height: auto;
+}
+.member_box:hover{
+    box-shadow: 10px 10px var(--hardpink);
+    transform: translate(-3px,-3px);
+    transition: 0.5;
+}
+#detail_us_box{
+    display: none;
+    position: absolute;
+}
+#name_hover{
+    /* background: chartreuse; */
+    cursor: pointer;
+    position: absolute;
+    justify-self: center;
+    align-self: flex-end;
+    font-size: 1.5vw;
+    text-shadow: 3px 3px var(--hardpink);
+    
+}
+#cami_box{animation-delay: .4s;}
+#javier_box{animation-delay: .8s;}
+#nacho_box{animation-delay: 1.2s;}
+#gary_box{animation-delay: 1.6s;}
+#martin_box{animation-delay: 2s;}
+
+
+
+    /* MEDIA QUERIES */
+
+@media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+    }
+    
+@media screen and (max-width: 767px) {
+    /* start of medium tablet styles */
+    }
+    
+@media screen and (max-width: 479px) {
+    /* start of phone styles */
+    }
+
+    

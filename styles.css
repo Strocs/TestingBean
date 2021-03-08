@@ -1,3 +1,8 @@
+@import url(./css/styles.css);
+@import url(./css/index.css);
+@import url(./nosotrxs/nosotrxs.css);
+
+
 :root{
     --darkblue: #1b2433;
     --darkblue2: #0d2a66;
@@ -6,20 +11,24 @@
     --yellow: #ffd763;
 }
 
+
+@keyframes girar {
+    from {transform: rotate(0deg);}
+    to { transform: rotate(360deg)}
+}
+
 @keyframes showUp {
     0% {opacity: 0;}
     100% {visibility: visible; opacity: 1;}
 }
-
 
 /* -------- SVG LOGO -------- */
 
 .st0{fill:var(--hardpink);}
 .st1{fill:var(--softblue);}
 
-
-
 /* --------- GENERALES --------- */
+
 
 body{
     padding: 0;
@@ -27,7 +36,6 @@ body{
     font-family: 'Montserrat', sans-serif;
     display: grid;
     background: var(--darkblue2);
-    /* animation: background 20s infinite alternate; */
     color: white;
 }
 li{
@@ -43,222 +51,58 @@ a{
 
 header{
     background-color: var(--darkblue2);
-    /* animation: background 20s infinite alternate; */
     position: sticky;
     top: 0;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    height: 100px;
+    height: 9vh;
 }
 
 #logo_frijol{
     align-self: flex-end;
-    padding-left: 150px;
+    padding-left: 8vw;
 }
 #link_logo{
-    height: 80px;
+    height: 8vh;
     display: flex;
     align-items: center;
 }
 #logo{
-    width: 70px;
-    height: 70px;
+    width: 4vw;
+    height: 8vh;
 }
 #text_logo{
-    padding-left: 10px;
+    padding-left: 1vh;
     user-select: none;
-    font-size: 1.7rem;
+    font-size: 1.3vw;
     text-shadow: 2px 3px var(--hardpink);
 }
 
 #nav_header{
     align-self: center;
-    padding-right: 140px;
+    padding-right: 7.5vw;
 }
 #nav_ul{
     display: flex;
 }
 #nav_list{
-    padding: 0 10px 0 10px;
+    padding: 0 .5vw;
 }
 
+#nav_link{
+    text-shadow: -.25px -.25px 0 transparent, 
+                  .25px .25px transparent;
+}
 #nav_link:hover{
-    color: var(--hardpink);
+    text-shadow: -.25px -.25px 0 white, 
+                  .25px .25px white;
+    
     transition: .2s;
 }
 
 
 
 
-
-
-#main_content{
-    display: grid;
-    grid-template-columns: 275px 1067px 275px;
-    grid-template-rows: 1fr 600px ;
-    gap: 50px;
-    margin: 30px 100px;
-    grid-template-areas: 
-    "title title title"
-    "schedulebox ytbox rrssbox";
-    animation: showUp 1s;
-    animation-fill-mode: backwards;
-}
-
-#main_text{
-    grid-area: title;
-    justify-self: center;
-    /* width: 720px; */
-}
-#main_text h1{
-    margin: 10px 0px;
-    font-size: 4rem;
-    text-align: center;
-    text-shadow: 2px 4px var(--hardpink);
-}
-
-
-#rrss_box, #schedule_box{
-    /* background: white; */
-    /* box-shadow: 7px 7px var(--hardpink); */
-    /* border: 2px dashed white ; */
-    transition: 0.3s;
-    /* min-width: 300px; */
-    animation: showUp 1s;
-    animation-delay: 1.5s;
-    animation-fill-mode: backwards;
-}
-
-#rrss_box{
-    grid-area: rrssbox;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-    gap: 50px;
-    /* max-height: 335px; */
-    /* min-height: 200px; */
-}
-
-
-#ig_box, .fb-page{
-    background: white;
-    color: var(--softblue);
-    box-shadow: 7px 7px var(--hardpink);
-    transition: 0.3s;
-    width: 275px;
-    /* justify-self: end; */
-}
-
-#ig_box{
-    background: white; 
-    animation: showUp 1s;
-    animation-delay: 0.5s;
-    animation-fill-mode: backwards;
-}
-.fb-page{
-    justify-self: start;
-    animation: showUp 1s;
-    animation-delay: 1s;
-    animation-fill-mode: backwards;
-}
-
-#ig_box:hover, .fb-page:hover{
-    box-shadow: 15px 15px var(--hardpink);
-    transition: 0.3s;
-    transform: translate(-5px,-5px);
-}
-
-.fb_iframe_widget iframe {
-    visibility: hidden;
-    animation: showUp 1s;
-    animation-delay: 1s;
-    animation-fill-mode: backwards;
-}
-
-
-
-/* --- INSTAGRAM FEED --- */
-
-.instagram-gallery-medium {
-    width: 275px;
-    /* cursor: pointer; */
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    flex-wrap: wrap;
-    position: absolute;
-}
-
-.instagram-gallery-medium > a {
-    width: 275px;
-    height: 275px;
-    position: relative;
-    overflow: hidden;
-    border: 1px solid white;
-}
-
-.instagram-gallery-medium > a > video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-
-#ig_img{
-    position: absolute;
-    display: block;
-    background: rgba(255, 255, 255);
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity .2s, visibility .2s;
-    z-index: 1;
-}
-#ig_feed:hover #ig_img{
-    visibility: visible;
-    opacity: 1;
-}
-
-
-
-
-#schedule_box{
-    color: var(--darkblue);
-    grid-area: schedulebox;
-    width: 275px;
-    background-color: white;
-    box-shadow: 7px 7px var(--hardpink);
-
-}
-
-#schedule_box:hover{
-    box-shadow: 15px 15px var(--hardpink);
-    transition: 0.3s;
-    transform: translate(-5px,-5px);
-}
-
-#chat-embed{
-    width: 275px;
-    height: 600px;
-}
-
-#youtube_box{
-    grid-area: ytbox;
-}
-
-#yt_box{
-    background: white;
-    border: 1px solid white;
-    box-shadow: 7px 7px var(--hardpink);
-    transition: 0.3s;
-}
-
-#yt_box:hover{
-    box-shadow: 15px 15px var(--hardpink);
-    transition: 0.3s;
-    transform: translate(-5px,-5px);
-}
 
 
 

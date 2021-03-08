@@ -1,0 +1,170 @@
+
+#stream_content{
+    display: grid;
+    grid-template-columns: 275px 1067px 275px;
+    grid-template-rows: 1fr 600px ;
+    gap: 50px;
+    margin: 30px 100px;
+    grid-template-areas: 
+    "title title title"
+    "schedulebox ytbox rrssbox";
+    animation: showUp 1s;
+    animation-fill-mode: backwards;
+}
+
+#stream_text{
+    grid-area: title;
+    justify-self: center;
+    /* width: 720px; */
+}
+#stream_text h1{
+    margin: 10px 0px;
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 2px 4px var(--hardpink);
+}
+
+
+#rrss_stream_box, #schedule_box{
+    /* background: white; */
+    /* box-shadow: 7px 7px var(--hardpink); */
+    /* border: 2px dashed white ; */
+    transition: 0.3s;
+    /* min-width: 300px; */
+    animation: showUp 1s;
+    animation-delay: 1.5s;
+    animation-fill-mode: backwards;
+}
+
+#rrss_stream_box{
+    grid-area: rrssbox;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 50px;
+    /* max-height: 335px; */
+    /* min-height: 200px; */
+}
+
+
+#ig_box, .fb-page{
+    background: white;
+    color: var(--softblue);
+    box-shadow: 7px 7px var(--hardpink);
+    transition: 0.3s;
+    width: 275px;
+    /* justify-self: end; */
+}
+
+#ig_box{
+    background: white; 
+    animation: showUp 1s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+.fb-page{
+    justify-self: start;
+    animation: showUp 1s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+#ig_box:hover, .fb-page:hover{
+    box-shadow: 15px 15px var(--hardpink);
+    transition: 0.3s;
+    transform: translate(-5px,-5px);
+}
+
+.fb_iframe_widget iframe {
+    visibility: hidden;
+    animation: showUp 1s;
+    animation-delay: 1s;
+    animation-fill-mode: backwards;
+}
+
+
+
+/* --- INSTAGRAM FEED --- */
+
+.instagram-gallery-medium {
+    width: 275px;
+    /* cursor: pointer; */
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    flex-wrap: wrap;
+    position: absolute;
+}
+
+.instagram-gallery-medium > a {
+    width: 275px;
+    height: 275px;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid white;
+}
+
+.instagram-gallery-medium > a > video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+#ig_img{
+    position: absolute;
+    display: block;
+    background: rgba(255, 255, 255);
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .2s, visibility .2s;
+    z-index: 1;
+}
+#ig_feed:hover #ig_img{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+
+
+#schedule_box{
+    color: var(--darkblue);
+    grid-area: schedulebox;
+    width: 275px;
+    background-color: white;
+    box-shadow: 7px 7px var(--hardpink);
+
+}
+
+#schedule_box:hover{
+    box-shadow: 15px 15px var(--hardpink);
+    transition: 0.3s;
+    transform: translate(-5px,-5px);
+}
+
+#chat-embed{
+    width: 275px;
+    height: 600px;
+}
+
+#youtube_box{
+    grid-area: ytbox;
+}
+
+#yt_box{
+    background: white;
+    border: 1px solid white;
+    box-shadow: 7px 7px var(--hardpink);
+    transition: 0.3s;
+}
+
+#yt_box:hover{
+    box-shadow: 15px 15px var(--hardpink);
+    transition: 0.3s;
+    transform: translate(-5px,-5px);
+}
+
+
+

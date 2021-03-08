@@ -6,16 +6,17 @@
     <title>Frijol Mágico | Apoyando la Ilustración Regional!</title>
     <link rel="icon" type="image/png" href="./assets/LogoFrijol.png" />
     <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./livestream/livestream.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_LA/sdk.js#xfbml=false&version=v10.0&appId=2469260113381635&autoLogAppEvents=1" nonce="coYthlrI"></script>        
-    
+        
     <header id="main_header">
         <div id="logo_frijol">
-            <a id="link_logo" href="#">
+            <a id="link_logo" href="./index.html">
                 <svg id="logo" viewBox="280 120 300 300">
                     <path class="st0" d="M506.7 202.6c25.8 2 72 17 72 29.5 -20.9 8-53-13.5-66.2-23.9C508.7 205.3 506.7 202.6 506.7 202.6"/>
                     <path class="st0" d="M402.4 201.3c0 0-148.9 44.5-90.2 57.2 27.2 5.9 76.4 1.7 75.8 1.7 -0.6 0-12.6 21.9-39.9 27.8 -39.8 8.6-81.2 36.4-50.9 89.9 27.4 48.4 175.7-38 175.7-38l45.1-97.1 -63.4-54.2L402.4 201.3z"/>
@@ -26,52 +27,54 @@
                 <h1 id="text_logo">Frijol <br> Mágico</h1>
             </a>
         </div>
-        
+
         <div id="nav_header">
             <ul id="nav_ul">
-                <li id="nav_list"><a id="nav_link" target="_self" href="./livestream.html">Livestream(Testing)</a></li>
+                <li id="nav_list"><a style="text-shadow: -.25px -.25px 0 white, .25px .25px white;" id="nav_link" target="_self" href="./livestream.html">Livestream(Testing)</a></li>
                 <li id="nav_list"><a id="nav_link" target="_self" href="https://blog.frijolmagico.cl">Blog</a></li>
                 <li id="nav_list"><a id="nav_link" target="_self" href="#">Festivales</a></li>
                 <li id="nav_list"><a id="nav_link" target="_self" href="#">Ilustradorxs</a></li>
                 <li id="nav_list"><a id="nav_link" target="_self" href="#">Talleres</a></li>
-               <li id="nav_list"><a id="nav_link" target="_self" href="./nosotrxs.html">Nosotrxs</a></li>
-        </ul>
-      </div>
+                <li id="nav_list"><a id="nav_link" target="_self" href="./nosotrxs.html">Nosotrxs</a></li>
+            </ul>
+        </div>
     </header>
 
-    <section id="main-content">
-        <div id="main_text">
-            <h1>Festival Frijol Mágico 2021 comienza en</h1>
+    <section id="stream_content">
+        <div id="stream_text">
+            <h1>¡Bienvenidos al Festival Frijol Mágico 2021!</h1>
         </div>
-        <div id="ilus_box">
-            <h3>Proximamente</h1>
-            </div>
-        <div id="center_box">
-            <div id="countdown">
-            </div>
-            <div id="rrss_box">
-                <div id="ig_box">
-                    <div id="ig_feed" style="position: relative;">
-                        <div id="instafeed" class="instagram-gallery-medium">
-                        <a id="ig_img" target="_blank" title="Mira esta publicación en Instagram!" style="background-image: url(./assets/frijol_nametag.png); background-size: 335px 335px;"></a>
-                        </div>
+
+
+        <div id="schedule_box">
+            <div id="chat-embed-wrapper" style="height: 600px;"></div>  
+        </div>
+
+        <div id="youtube_box">
+            <iframe id="yt_box" width="1067" height="600" src="https://www.youtube.com/embed/oVi5gtzTDx0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div id="rrss_stream_box">
+            <div id="ig_box">
+                <div id="ig_feed" style="position: relative;">
+                    <div id="instafeed" class="instagram-gallery-medium">
+                    <a id="ig_img" target="_blank" title="Mira esta publicación en Instagram!" style="background-image: url(./assets/frijol_nametag.png); background-size: 275px 275px;"></a>
                     </div>
                 </div>
-                <div class="fb-page" data-href="https://www.facebook.com/festivalfrijolmagico/" data-tabs="timeline" data-width="335" data-height="335" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/festivalfrijolmagico/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/festivalfrijolmagico/">Festival Frijol Magico</a></blockquote></div>
             </div>
+            <div class="fb-page" data-href="https://www.facebook.com/festivalfrijolmagico/" data-tabs="timeline" data-width="275" data-height="275" data-small-header="true" data-adapt-container-width="false" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/festivalfrijolmagico/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/festivalfrijolmagico/">Festival Frijol Magico</a></blockquote></div>
         </div>
-        <div id="blog_box">
-            <h3>Proximamente</h3> 
-        </div>
+
     </section>
+
     
-    
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./js/simplyCountdown.min.js"></script>
-    <script src="./js/countdown.js"></script>
+    <script src="js/simplyCountdown.min.js"></script>
+    <script src="js/countdown.js"></script>
     <script src="./js/FCInstagram.js"></script>
-    <script src="./index.js"></script>
+    <script src="./livestream/livestream.js"></script>
+    <script src="index.js"></script>
 </body>
 </html> 
 
