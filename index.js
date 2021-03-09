@@ -9,9 +9,18 @@ $('#instafeed').FCInstagram({
     }
 });
 
+fbResponsive = () => {
+    let screenValor = window.screen.width
+    let fbRespo = document.getElementsByClassName('fb-page')[0]
+  
+    if (screenValor <= 1366) {
+        fbHeight = fbRespo.setAttribute('data-height', '233px')
+        fbWidth = fbRespo.setAttribute('data-width', '233px')
+    } else if (screenValor > 1366) {
+        fbHeight = fbRespo.setAttribute('data-height', '333px')
+        fbWidth = fbRespo.setAttribute('data-width', '333px')
+    }
+}
 
-// window.onload = function() {
-//     const contenedor = document.getElementById('contenedor_carga')
-//     contenedor.style.visibility = 'hidden'
-//     contenedor.style.opacity = '0'
-// }
+fbResponsive()
+

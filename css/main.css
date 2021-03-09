@@ -1,0 +1,105 @@
+:root{
+    --darkblue: #1b2433;
+    --darkblue2: #0d2a66;
+    --softblue: #346fb4;
+    --hardpink: #fa2678;
+    --yellow: #ffd763;
+}
+
+
+@keyframes girar {
+    from {transform: rotate(0deg);}
+    to { transform: rotate(360deg)}
+}
+
+@keyframes showUp {
+    0% {opacity: 0;}
+    100% {visibility: visible; opacity: 1;}
+}
+
+/* -------- SVG LOGO -------- */
+
+.st0{fill:var(--hardpink);}
+.st1{fill:var(--softblue);}
+
+/* --------- GENERALES --------- */
+
+
+body{
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: grid;
+    background: var(--darkblue2);
+    color: white;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+/* --------- HEADER --------- */
+
+header{
+    background-color: var(--darkblue2);
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    height: 9vh;
+}
+
+#logo_frijol{
+    align-self: flex-end;
+    padding-left: 8vw;
+}
+#link_logo{
+    height: 8vh;
+    display: flex;
+    align-items: center;
+}
+#logo{
+    width: 4vw;
+    height: 8vh;
+}
+#text_logo{
+    padding-left: .5vw;
+    user-select: none;
+    font-size: 1.3vw;
+    text-shadow: 2px 3px var(--hardpink);
+}
+
+#nav_header{
+    align-self: center;
+    padding-right: 7.5vw;
+}
+#nav_ul{
+    display: flex;
+    margin: 0;
+}
+#nav_list{
+    height: 3vw;
+    padding: 0 .5vw;
+    transition: .2s;
+}
+#nav_list:hover{
+    transform: translateY(-.5vw);
+    transition: .2s;
+}
+#nav_link{
+    font-size: .84vw;
+    display: table-cell;
+    vertical-align: middle;
+    height: 3vw;
+}
+
+
+
+
+
+
+
