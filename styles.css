@@ -1,30 +1,6 @@
 @import url(./css/main.css);
 
 
-    /* ANIMATION */
-
-#main_text, 
-#countdown, 
-#ilus_box, 
-#blog_box, 
-#ig_box, 
-.fb-page{
-    animation: showUp 1.5s;
-    animation-fill-mode: backwards;
-}
-
-#main_text{animation-delay: .4s;}
-#countdown{animation-delay: .4s;}
-#ig_box{animation-delay: 1s;}
-.fb-page{animation-delay: 1.6s;}
-#ilus_box, #blog_box{animation-delay: 2.2s;}
- 
-
-    /* SOMBRAS */
-.simply-section, #ig_box, .fb-page{
-    box-shadow: .4vw .4vw var(--hardpink);
-}
-
     /* GENERAL */
 h3{font-size: 1vw;}
 
@@ -35,11 +11,12 @@ h3{font-size: 1vw;}
     /* TITULO */
 
 #main_text{
+    font-family: 'Cabin Sketch', cursive;
+    text-shadow: .2vw .2vw var(--hardpink);
+    font-size: 3vw;
+    text-align: center;
     width: 36vw;
     margin: 2vh auto;
-    font-size: 2.5vw;
-    text-align: center;
-    text-shadow: 2px 4px var(--hardpink);
 }
 
     /* CAJA PRINCIPAL */
@@ -173,7 +150,7 @@ h3{font-size: 1vw;}
     transition: opacity .2s, visibility .2s;
     z-index: 1;
 }
-#ig_feed:hover #ig_img{
+#ig_feed:hover #ig_img {
     visibility: visible;
     opacity: 1;
 }

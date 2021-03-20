@@ -14,8 +14,8 @@ fbResponsive = () => {
     let fbRespo = document.getElementsByClassName('fb-page')[0]
   
     if (screenValor <= 1366) {
-        fbHeight = fbRespo.setAttribute('data-height', '233px')
-        fbWidth = fbRespo.setAttribute('data-width', '233px')
+        fbHeight = fbRespo.setAttribute('data-height', '280px')
+        fbWidth = fbRespo.setAttribute('data-width', '280px')
     } else if (screenValor > 1366) {
         fbHeight = fbRespo.setAttribute('data-height', '333px')
         fbWidth = fbRespo.setAttribute('data-width', '333px')

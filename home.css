@@ -1,0 +1,201 @@
+@import url(./css/main.css);
+
+
+/*  ------- SOON TEXT ------- */
+h3 {
+    font-size: 1.5rem;
+    font-family: var(--ff-text-light);
+}
+
+
+/*  ------- SHADOWS ------- */
+
+.simply-section, .instagram-gallery-medium, .fb-page{
+    box-shadow: .8rem .8rem var(--pink-normal);
+}
+
+/*  ------- ANIMATIONS ------- */
+
+/* #main_text, 
+#countdown, 
+#ilus_box, 
+#blog_box, 
+#ig_box, 
+.fb-page{
+    animation: showUp 1.5s;
+    animation-fill-mode: backwards;
+}
+#main_text{animation-delay: .4s;}
+#countdown{animation-delay: .4s;}
+#ig_box{animation-delay: 1s;}
+.fb-page{animation-delay: 1.6s;}
+#ilus_box, #blog_box{animation-delay: 2.2s;}
+      */
+
+
+
+/*  
+    ------------- 
+       GENERAL
+    ------------- 
+*/
+
+.main__container {
+    margin: 12vh 4vw 6vh;
+}
+
+/*  
+    ------------- 
+        TITLE 
+    ------------- 
+*/
+
+.main__header {
+    margin: 0 auto;
+    max-width: 700px;
+}
+
+.main__title {
+    font-size: 6rem;
+    text-align: center;
+    text-shadow: .4rem .4rem var(--pink-normal);
+}
+
+/*  
+    ------------- 
+       BOXES
+    ------------- 
+*/
+
+/*  ------- GENERAL ------- */
+
+
+.box__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.side__box {
+    border: 2px dashed white;
+    width: 28rem;
+    height: 28rem;
+    margin: 2rem 0;
+
+    /* BORRAR */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center__box {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.blog__box {
+    order: 2;
+}
+
+.ilus__box {
+    order: 3;
+}
+
+/*  ------- CENTER BOX ------- */
+
+.rrss__box {
+
+}
+
+.ig__box {
+    margin: 6rem 0 6rem;
+}
+
+.fb-page {
+    margin-bottom: 4rem;
+}
+
+.fb_iframe_widget_fluid {
+    display: block !important;
+}
+
+.fb_iframe_widget {
+    position: static !important;
+}
+
+.fb_iframe_widget span {
+    position: static !important;
+}
+
+.fb_iframe_widget iframe {
+    position: static !important;
+}
+
+/*  ------- COUNTDOWN ------- */
+
+#countdown{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.simply-section{
+    background: white;
+    color: var(--blue-normal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13rem;
+    height: 13rem;
+    margin: 1rem;
+}
+
+.simply-amount{
+    display: block;
+    font-family: var(--ff-text-bold);
+    text-align: center;
+    font-size: 4rem;
+}
+
+.simply-word{
+    font-size: 2rem;
+}
+
+
+/*  ------- INSTAGRAM FEED ------- */
+
+.instagram-gallery-medium {
+    display: flex;
+}
+
+.instagram-gallery-medium > a {
+    width: 28rem;
+    height: 28rem;
+    overflow: hidden;
+
+}
+
+.instagram-gallery-medium > a > video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ig_img{
+    background-image: url(./assets/instagram.svg); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 12rem 12rem;
+    /* backdrop-filter: blur(3px) grayscale(50%); */
+    /* visibility: hidden; */
+    /* opacity: 0; */
+    transition: opacity .2s, visibility .2s;
+    margin-left: -28rem;
+}
+#ig_feed:hover .ig_img {
+    /* visibility: visible; */
+    /* opacity: 1; */
+}

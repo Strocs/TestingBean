@@ -139,7 +139,7 @@ if (typeof Object.create !== "function") {
           })
 
           
-          let igImagen = document.getElementById('ig_img')
+          let igImagen = document.getElementsByClassName('ig_img')[0]
           igImagen.setAttribute('href', results.data[i].permalink)
           
           // Add item
@@ -171,7 +171,7 @@ if (typeof Object.create !== "function") {
         }
       }
 
-      this.$elem.append(imageGroup);
+      this.$elem.prepend(imageGroup);
 
       if (typeof this.options.complete === "function") {
         this.options.complete.call(this);

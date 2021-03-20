@@ -1,30 +1,32 @@
-let cami = document.getElementById('cami_img')
-    camiInfo = document.getElementById('detail_cami_box')
+let cami = document.getElementsByClassName('cami__img')[0]
+    camiInfo = document.getElementsByClassName('detail__cami-box')[0]
 
-    javier = document.getElementById('javier_img')
-    javierInfo = document.getElementById('detail_javier_box')
+    javier = document.getElementsByClassName('javier__img')[0]
+    javierInfo = document.getElementsByClassName('detail__javier-box')[0]
 
-    nacho = document.getElementById('nacho_img')
-    nachoInfo = document.getElementById('detail_nacho_box')
+    nacho = document.getElementsByClassName('nacho__img')[0]
+    nachoInfo = document.getElementsByClassName('detail__nacho-box')[0]
 
-    gary = document.getElementById('gary_img')
-    garyInfo = document.getElementById('detail_gary_box')
+    gary = document.getElementsByClassName('gary__img')[0]
+    garyInfo = document.getElementsByClassName('detail__gary-box')[0]
 
-    martin = document.getElementById('martin_img')
-    martinInfo = document.getElementById('detail_martin_box')
+    martin = document.getElementsByClassName('martin__img')[0]
+    martinInfo = document.getElementsByClassName('detail__martin-box')[0]
 
-    detailBox = document.getElementById('detail_us_container')
-    memberCard = document.getElementById('detail_us_box')
-
+    detailBox = document.getElementsByClassName('detail__container')[0]
+    memberCard = document.getElementsByClassName('detail__card')[0]
+    closeBtn = document.getElementsByClassName('detail__close-btn')[0]
 
 cami.addEventListener('click', function(){
     detailBox.style.display = 'inherit'
     camiInfo.style.visibility = 'visible'
 })
+
 javier.addEventListener('click', function(){
     detailBox.style.display = 'inherit'
     javierInfo.style.visibility = 'visible'
 })
+
 nacho.addEventListener('click', function(){
     detailBox.style.display = 'inherit'
     nachoInfo.style.visibility = 'visible'
@@ -51,5 +53,12 @@ detailBox.addEventListener('click', function(){
     martinInfo.style.visibility = 'hidden'
 })
 
-
+closeBtn.addEventListener('click', function(){
+    detailBox.style.display = 'none'
+    camiInfo.style.visibility = 'hidden'
+    javierInfo.style.visibility = 'hidden'
+    nachoInfo.style.visibility = 'hidden'
+    garyInfo.style.visibility = 'hidden'
+    martinInfo.style.visibility = 'hidden'
+})
 

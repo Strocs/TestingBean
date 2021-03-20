@@ -2,153 +2,200 @@
 
 
 
- /* GENERAL */
+/*  
+    ------------- 
+       GENERAL
+    ------------- 
+*/
 
-#us_box{
-    margin: 5vh 10vw;
-}
-#us_title, .member_box{
-    animation: showUp .8s;
-    animation-fill-mode: backwards;
-}
-
-    /* TITULO Y  ABSTRACT */
-
-#us_main_title{
-    font-size: 2.5vw;
-    text-align: center;
-    text-shadow: 2px 4px var(--hardpink);
-}
-#us_title{
-    width: 60vw;
-    margin: 0 auto;
-}
-#us_text{
-    font-size: .9vw;
-    margin: 7vh 0;
-    text-align: justify;
-}
-
-    /* CAJITAS */
-
-#member_main{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-}
-.member_box{
-    margin: 30px 20px;
-    display: grid;
-    position: relative;
-    justify-self: center;
-    border-radius: 100%;
-    box-shadow: 5px 5px var(--hardpink);
-    transition: 0.5s;
-}
-.member_img{
-    cursor: pointer;
-    border-radius: 100%;
-    width: 250px;
-    max-width: 100%;
-    height: auto;
-}
-.member_box:hover{
-    box-shadow: 10px 10px var(--hardpink);
-    transform: translate(-3px,-3px);
-    transition: 0.5;
-}
-#name_hover{
-    cursor: pointer;
-    position: absolute;
-    justify-self: center;
-    align-self: flex-end;
-    font-size: 1.5vw;
-    text-shadow: 3px 3px var(--hardpink);
-}
-
-#cami_box{animation-delay: .5s;}
-#javier_box{animation-delay:1s;}
-#nacho_box{animation-delay: 1.5s;}
-#gary_box{animation-delay: 2s;}
-#martin_box{animation-delay: 2.5s;}
-
-
-    /* POPUP CAJITA */
-
-@keyframes popup {
-    0% {transform: scale(.8);}
-    100% {transform: scale(1);}
-}
-@keyframes backblur {
-    0%{backdrop-filter: blur(2px);}
-    100%{backdrop-filter: blur(6px);}
-}
-#detail_us_container{
-    display: none;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    backdrop-filter: blur(6px);
-    animation: backblur .1s ease forwards;
-}
-#detail_us_box{
-    position: relative;
-    background-color: #0d2a66ee;
-    margin: 12vw auto;
-    height: 30vw;
-    width: 60vw;
-    border-radius: 1vw;
-    box-shadow: 0 0 40px #000;
-    animation: popup .2s;
-}
-.detail_member_box{
-    position: absolute;
-    display: flex;
-    padding: 2vw;
-    height: 85%;
-}
-#detail_member_info{
+.us__box{
+    margin: 12vh 6vw 6vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 35vw;
+    align-items: center;
 }
-#detail_member_img{
-    margin-right: 2vw;
-    height: 18vw;
-    width: 18vw;
-    align-self: center;
-    border-radius: 100%;
-    border: 1px solid white;
+.us__title-box, .member__title, .member__box{
+    animation: showUp 600ms backwards;
 }
-#member_name{
-    font-size: 2vw;
-    text-shadow: 2px 4px var(--hardpink);
+
+
+
+/*  
+    ------------- 
+    TITLE & ABSTRACT
+    ------------- 
+*/
+
+.us_title-box{
+    margin: 0 auto;
 }
-#member_text{
+
+.us__main-title{
+    font-size: 6rem;
+    text-align: center;
+    text-shadow: .4rem .4rem var(--pink-normal);
+}
+
+.us__text{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto 5vh;
+    justify-content: space-around;
+}
+
+.us__p{
+    margin: 1vh 2vw;
+    font-size: 1.6rem;
     text-align: justify;
-    font-size: .9vw;
+    word-spacing: -.1rem;
+    max-width: 500px;
+    min-width: 300px;
 }
 
-#rrss_member{
-    margin: 2vw 0 0 8vw;
-    justify-self: center;
-}
-#ig_icon{
-    position: absolute;
-    height: 3vw;
-    width: 3vw;
+
+
+/*  
+    ------------- 
+       MEMBERS
+    ------------- 
+*/
+
+.member__main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 850px;
+
 }
 
-#detail_cami_box,
-#detail_javier_box,
-#detail_nacho_box,
-#detail_gary_box,
-#detail_martin_box{
+.member__title{
+    font-size: 5rem;
+}
+
+.member__box{
+    display: flex;
+    margin: 3rem 1vw;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.member__img{
+    box-shadow: .8rem .8rem var(--pink-normal);
+    transition: 300ms;
+    transition-property: box-shadow, transform;
+    border-radius: 100%;
+    width: 24rem;
+    height: auto;
+}
+
+.member__box:hover > .member__img{
+    box-shadow: 1.4rem 1.4rem var(--pink-normal);
+    transform: translate(-.4rem,-.4rem);
+    transition: 100ms;
+    transition-property: box-shadow, transform;
+}
+
+.cami__box{animation-delay: 300ms;}
+.javier__box{animation-delay: 600ms;}
+.nacho__box{animation-delay: 900ms;}
+.gary__box{animation-delay: 1200ms;}
+.martin__box{animation-delay: 1500ms;}
+
+/*  
+    ------------- 
+     MEMBER CARD
+    ------------- 
+*/
+
+.detail__cami-box,
+.detail__javier-box,
+.detail__nacho-box,
+.detail__gary-box,
+.detail__martin-box{
     visibility: hidden;
 }
 
 
-    /* ANIMACION IG */
+@keyframes popup {
+    0% {transform: scale(.5);}
+    100% {transform: scale(1);}
+}
+
+@keyframes backblur {
+    0%{backdrop-filter: blur(2px);}
+    100%{backdrop-filter: blur(6px);}
+}
+
+.detail__container{
+    display: none;
+    position: fixed;
+    width: 100%;
+    padding-bottom: 100vh;
+    z-index: 11;
+}
+
+.detail__card{
+    display: grid;
+    grid-template-areas: 'card';
+    position: relative;
+    margin:10vh auto;
+    width: 90%;
+    max-width: 800px;
+    padding-bottom: 3rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 40px #000;
+    animation: popup 200ms;
+    background: var(--blue-normal-opa);
+    backdrop-filter: blur(6px);
+
+}
+
+
+.detail__member-box{
+    grid-area: card;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2rem 3rem 0;
+}
+
+.detail__info{
+    display: flex;
+    flex-direction: column;
+}
+
+.detail__img{
+    display: none;
+}
+
+.detail__name{
+    text-shadow: .4rem .4rem var(--pink-normal);
+    margin: 0;
+    font-size: 3rem;
+}
+
+.detail__text{
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+
+/*  ------- RRSS ------- */
+
+.detail__rrss {
+    max-width: 17rem;
+}
+
+.detail__rrss-link {
+    display: flex;
+    align-items: center;
+}
+
+.detail__ig{
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
 
 @keyframes move {
     0%,
@@ -163,35 +210,80 @@
     }
 }
 
-#ig_animated {
+.detail__ig-animation {
+    padding-right: 1rem;
     overflow: hidden;
-    margin-left: 3vw;
-    height: 3vw;
 }
 
-#ig_animated span {
-    cursor: default;
-    font-size: 1.3vw;
-    margin-top: .7vw;
+.detail__ig-animation span {
+    font-size: 1.6rem;
     display: inline-block;
     animation: move 2s forwards;
 }
 
 
+/*  ------- CLOSE BUTTON ------- */
 
-
-    /* MEDIA QUERIES */
-
-@media screen and (max-width: 991px) {
-    /* start of large tablet styles */
+.detail__close-btn {
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    bottom: -1.5rem;
+    right: -1.5rem;
+    border: 2px 2px solid white;
 }
 
-@media screen and (max-width: 767px) {
-        /* start of medium tablet styles */
-    }
-    
-@media screen and (max-width: 479px) {
-    /* start of phone styles */
-    }
+.detail__close-btn::after,
+.detail__close-btn::before {
+    position: absolute;
+    content: '';
+    background: white;
+    border-radius: 2px;
+    top: 0;
+    bottom: 0;
+    left: 0; 
+    right: 0; 
+    margin: auto; 
+    height: 5px;
+    width: 3rem;
+}
 
+.detail__close-btn::after {
+    transform: rotate(45deg);
+}
+
+.detail__close-btn::before {
+    transform: rotate(-45deg);
+}
+
+
+
+
+/*  
+    ------------- 
+    MEDIA QUERIES
+    ------------- 
+*/
+
+@media screen and (max-width: 991px) {
+        /* start of large tablet styles */
+}
     
+@media screen and (min-width: 767px) {
+    .detail__img{
+        display: inherit;
+        height: 30rem;
+        width: 30rem;
+        margin: 1em auto;
+        border-radius: 100%;
+        border: 1px solid white;
+    }
+    .detail__member-box{
+        margin: 2rem 7rem 0;
+    }
+    
+    .member__img{
+        width: 18rem;
+        height: auto;
+    }
+}
