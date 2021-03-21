@@ -12,25 +12,27 @@ h3 {
 
 .simply-section, .instagram-gallery-medium, .fb-page{
     box-shadow: .8rem .8rem var(--pink-normal);
+    transition: 300ms;
+    transition-property: box-shadow, transform;
 }
 
 /*  ------- ANIMATIONS ------- */
 
-/* #main_text, 
+.main__container,
+.main__title, 
 #countdown, 
-#ilus_box, 
-#blog_box, 
-#ig_box, 
+.side__box,  
+.ig__box, 
 .fb-page{
-    animation: showUp 1.5s;
-    animation-fill-mode: backwards;
+    animation: showUp 600ms backwards;
 }
-#main_text{animation-delay: .4s;}
-#countdown{animation-delay: .4s;}
-#ig_box{animation-delay: 1s;}
+
+.main_title{animation-delay: 400ms;}
+#countdown{animation-delay: 400ms;}
+#ig_feed{animation-delay: 1s;}
 .fb-page{animation-delay: 1.6s;}
-#ilus_box, #blog_box{animation-delay: 2.2s;}
-      */
+.side__box{animation-delay: 2.2s;}
+     
 
 
 
@@ -41,7 +43,8 @@ h3 {
 */
 
 .main__container {
-    margin: 12vh 4vw 6vh;
+    margin: 12rem auto 6rem;
+
 }
 
 /*  
@@ -59,6 +62,7 @@ h3 {
     font-size: 6rem;
     text-align: center;
     text-shadow: .4rem .4rem var(--pink-normal);
+    margin: 2rem 1.5rem;
 }
 
 /*  
@@ -80,7 +84,7 @@ h3 {
     border: 2px dashed white;
     width: 28rem;
     height: 28rem;
-    margin: 2rem 0;
+    margin: 1rem;
 
     /* BORRAR */
     display: flex;
@@ -93,28 +97,34 @@ h3 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    width: 100%;
 }
 
 .blog__box {
     order: 2;
+    margin: 1rem 1rem 3rem;
 }
 
 .ilus__box {
     order: 3;
+    margin: 3rem 1rem 1rem;
 }
 
 /*  ------- CENTER BOX ------- */
 
 .rrss__box {
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 4rem 0;
 }
 
 .ig__box {
-    margin: 6rem 0 6rem;
+    margin: 1rem 1rem 3rem;
 }
 
 .fb-page {
-    margin-bottom: 4rem;
+    margin: 3rem 1rem 1rem;
 }
 
 .fb_iframe_widget_fluid {
@@ -189,13 +199,104 @@ h3 {
     background-position: center;
     background-repeat: no-repeat;
     background-size: 12rem 12rem;
-    /* backdrop-filter: blur(3px) grayscale(50%); */
-    /* visibility: hidden; */
-    /* opacity: 0; */
     transition: opacity .2s, visibility .2s;
     margin-left: -28rem;
 }
-#ig_feed:hover .ig_img {
-    /* visibility: visible; */
-    /* opacity: 1; */
+
+
+
+/*  
+    ------------- 
+    MEDIA QUERIES
+    ------------- 
+*/
+
+/*  ------- TABLETS ------- */
+
+@media screen and (min-width: 600px) {
+    .ig_img{
+        background-image: url(./assets/instagram.svg); 
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 12rem 12rem;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity .2s, visibility .2s;
+        margin-left: -28rem;
+    }
+    #ig_feed:hover .ig_img {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .ig__box {
+        margin: 1rem;
+    }
+
+    .fb-page {
+        margin: 1rem;
+    }
+
+    .blog__box {
+        margin: 1rem;
+    }
+
+    .ilus__box {
+        margin: 1rem;
+    }
+}
+
+
+/*  ------- DESKTOP ------- */
+
+@media screen and (min-width: 1366px) {
+
+
+    .main__container {
+        margin: 5% auto 5%;
+    }
+
+    /*  ------- GENERAL ------- */
+
+
+    .box__container {
+        flex-wrap: nowrap;
+        max-width: 1200px;
+    }
+
+    .side__box {
+        width: 50rem;
+        height: 45rem;
+    }
+
+    .center__box {
+        order: 2;
+    }
+
+    .blog__box {
+        order: 1;
+    }
+
+    .ilus__box {
+        order: 3;
+    }
+
+    /*  ------- CENTER BOX ------- */
+
+    .rrss__box {
+        margin: 2vh 0 0;
+    }
+
+    
+    /*  ------- GENERAL HOVER ------- */
+    
+    .simply-section:hover, .instagram-gallery-medium:hover, .fb-page:hover{
+        box-shadow: 1.4rem 1.4rem var(--pink-normal);
+        transform: translate(-.4rem,-.4rem);
+        transition: 100ms;
+        transition-property: box-shadow, transform;
+    }
+
+
+
 }
