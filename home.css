@@ -10,7 +10,7 @@ h3 {
 
 /*  ------- SHADOWS ------- */
 
-.simply-section, .instagram-gallery-medium, .fb-page{
+.simply-section, .instagram-gallery-medium, .fb__box{
     box-shadow: .8rem .8rem var(--pink-normal);
     transition: 300ms;
     transition-property: box-shadow, transform;
@@ -22,15 +22,15 @@ h3 {
 .main__title, 
 #countdown, 
 .side__box,  
-.ig__box, 
-.fb-page{
+.instagram-gallery-medium, 
+.fb__box{
     animation: showUp 600ms backwards;
 }
 
 .main_title{animation-delay: 400ms;}
 #countdown{animation-delay: 400ms;}
-#ig_feed{animation-delay: 1s;}
-.fb-page{animation-delay: 1.6s;}
+.instagram-gallery-medium{animation-delay: 1s;}
+.fb__box{animation-delay: 1.6s;}
 .side__box{animation-delay: 2.2s;}
      
 
@@ -125,26 +125,10 @@ h3 {
     margin: 1rem 1rem 3rem;
 }
 
-.fb-page {
+.fb__box {
     width: 28rem;
     height: 28rem;
     margin: 3rem 1rem 1rem;
-}
-
-.fb_iframe_widget_fluid {
-    display: block !important;
-}
-
-.fb_iframe_widget {
-    position: static !important;
-}
-
-.fb_iframe_widget span {
-    position: static !important;
-}
-
-.fb_iframe_widget iframe {
-    position: static !important;
 }
 
 /*  ------- COUNTDOWN ------- */
@@ -237,7 +221,7 @@ h3 {
         margin: 1rem;
     }
 
-    .fb-page {
+    .fb__box {
         margin: 1rem;
     }
 
@@ -294,7 +278,7 @@ h3 {
     
     /*  ------- GENERAL HOVER ------- */
     
-    .simply-section:hover, .instagram-gallery-medium:hover, .fb-page:hover{
+    .simply-section:hover, .instagram-gallery-medium:hover, .fb__box:hover{
         box-shadow: 1.4rem 1.4rem var(--pink-normal);
         transform: translate(-.4rem,-.4rem);
         transition: 100ms;
